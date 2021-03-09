@@ -1,38 +1,27 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-// import basicLayout from '@/layouts/basicLayout'
+import BasicLayout from '@/layouts/BasicLayout'
 
 Vue.use(VueRouter)
 
-const defaultRoutes = [
+export const defaultRoutes = [
   {
     path: '/',
-    // component: basicLayout,
-    component: () => import('@/layouts/basicLayout'),
+    component: BasicLayout,
     children: [
       {
-        path: '/',
-        redirect: '/home'
-      },
-      {
-        path: '/home',
+        path: 'home',
         name: 'home',
-        component: () => import('@/views/Home')
-      },
-      {
-        path: '/about',
-        name: 'about',
-        component: () => import('@/views/About')
+        component: () => import('@/views/Home.vue'),
+        meta: { title: 'home', icon: '' }
       }
     ]
   }
 ]
 
-const router = new VueRouter({
+export default new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  defaultRoutes
+  routes: defaultRoutes
 })
-
-export default router
