@@ -1,7 +1,5 @@
 const path = require('path')
-function resolve (dir) {
-  return path.join(__dirname, dir) // path.join()方法会将所有给定的 path 片段连接到一起，然后规范化生成的路径。
-}
+const resolve = dir => path.join(__dirname, dir)
 
 // 所有配置项: https://cli.vuejs.org/zh/config/#vue-config-js
 module.exports = {
@@ -14,11 +12,23 @@ module.exports = {
   devServer: {
     port: 8280, // 设置端口
     open: true, // 设置自动打开
-    hot: true
+    hot: true,
+    hotOnly: false // 热更新
+    // overlay: { // 让浏览器 overlay 同时显示警告和错误
+    //   warnings: true,
+    //   errors: true
+    // },
   },
 
-  chainWebpack (config) {
+  chainWebpack: config => {
+    // 添加别名
     config.resolve.alias
       .set('@', resolve('src'))
+      .set('@assets', resolve('@/assets'))
+  },
+
+  configureWebpack: config => {
+    // polyfill
+    config.entry = ['babel-polyfill', './src/main.js']
   }
 }

@@ -1,27 +1,26 @@
 <template>
-  <div class="basicLayout">
-    <sidebar />
+  <a-layout class="basicLayout">
+    <Sidebar />
     <div class="basicContainer">
       <basicHead />
       <basicMain />
     </div>
-  </div>
+  </a-layout>
 </template>
 
 <script>
-import { sidebar, basicHead, basicMain } from './component';
+import { Sidebar, basicHead, basicMain } from './component'
+
 export default {
-  name: 'basicLayout',
+  name: 'BasicLayout',
   components: {
-    sidebar, basicHead, basicMain
+    Sidebar,
+    basicHead,
+    basicMain
   }
 }
 </script>
 
 <style lang="less" scoped>
-.basicLayout{
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
+
 </style>
