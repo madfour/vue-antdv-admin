@@ -11,31 +11,31 @@
     <a-menu theme="dark" mode="inline" :default-selected-keys="['1']">
       <a-menu-item key="1">
         <a-icon type="user" />
-        <span>nav 1</span>
+        <span>nav_item 1</span>
       </a-menu-item>
       <a-menu-item key="2">
         <a-icon type="video-camera" />
-        <span>nav 2</span>
+        <span>nav_item 2</span>
       </a-menu-item>
       <a-menu-item key="3">
         <a-icon type="upload" />
-        <span>nav 3</span>
+        <span>nav_item 3</span>
       </a-menu-item>
       <a-sub-menu key="sub1">
         <span slot="title">
           <a-icon type="mail" /><span>Navigation One</span>
         </span>
         <a-menu-item key="5">
-          Option 5
+          Option_itemList 5
         </a-menu-item>
         <a-menu-item key="6">
-          Option 6
+          Option_itemList 6
         </a-menu-item>
         <a-menu-item key="7">
-          Option 7
+          Option_itemList 7
         </a-menu-item>
         <a-menu-item key="8">
-          Option 8
+          Option_itemList 8
         </a-menu-item>
       </a-sub-menu>
       <a-sub-menu key="sub2">
@@ -43,17 +43,17 @@
           <a-icon type="appstore" /><span>Navigation Two</span>
         </span>
         <a-menu-item key="9">
-          Option 9
+          Option_itemList 9
         </a-menu-item>
         <a-menu-item key="10">
-          Option 10
+          Option_itemList 10
         </a-menu-item>
         <a-sub-menu key="sub3" title="Submenu">
           <a-menu-item key="11">
-            Option 11
+            Option_itemList 11
           </a-menu-item>
           <a-menu-item key="12">
-            Option 12
+            Option_itemList 12
           </a-menu-item>
         </a-sub-menu>
       </a-sub-menu>
