@@ -1,3 +1,3 @@
-export { default as Sidebar } from './sidebar'
-export { default as basicHead } from './basicHead'
-export { default as basicMain } from './basicMain'
+export { default as Sidebar } from './Sidebar'
+export { default as BasicHead } from './Header/BasicHeader'
+export { default as BasicMain } from './BasicMain'
